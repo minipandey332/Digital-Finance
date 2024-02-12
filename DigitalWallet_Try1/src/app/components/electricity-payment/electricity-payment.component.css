@@ -1,0 +1,86 @@
+.container-fluid {
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://as2.ftcdn.net/v2/jpg/02/22/45/25/1000_F_222452529_DlbZoCG0c6I9QmJi3K9mEED3R2FpERMI.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .form-container {
+    margin-right: 10%;
+    max-width: 600px; /* Increase the maximum width */
+    width: 700px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    width: 90%;
+  }
+ 
+  .image {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .progress {
+    height: 10px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px; /* Increase the padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    padding: 12px 24px; /* Increase the padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button-container button:first-child {
+    background-color: #bbb;
+  }
+  
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .button-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

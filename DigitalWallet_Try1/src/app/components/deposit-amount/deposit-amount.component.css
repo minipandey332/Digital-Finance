@@ -1,0 +1,16 @@
+.backimg { background-image: url('https://www.lyra.com/in/wp-content/uploads/sites/8/2019/05/2-4-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+   
+  }
+  .backimg .card-body {
+    overflow-y: auto;
+  }
+  /* Custom styles for the MatSnackBar */
+.custom-snackbar {
+  background-color: red !important;
+  color: white !important;
+  width: 40%;
+}

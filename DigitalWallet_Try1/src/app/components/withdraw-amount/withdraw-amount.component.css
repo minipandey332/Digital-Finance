@@ -1,0 +1,16 @@
+.backimg {
+    background-image: url('https://www.lyra.com/in/wp-content/uploads/sites/8/2019/05/2-4-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+.col-md-9.col-lg-7.col-xl-5 {
+    float: right;
+    /* padding-left: 10%; */
+    margin-left: 60%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  

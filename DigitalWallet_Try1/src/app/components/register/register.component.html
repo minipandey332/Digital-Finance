@@ -1,0 +1,75 @@
+<div class="container back-color">
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
+
+  
+      <div class="row">
+        <div class="col">
+          <label for="firstname" class="form-label">First Name</label>
+          <input formControlName="FullName" type="text" class="form-control" id="firstname">
+          <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">
+            First name is required
+          </div>
+          <div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">
+            Name should only contains Alphabet
+          </div>
+        </div>
+      
+      </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label  for="email" class="form-label">Email address</label>
+            <input formControlName="Email" type="email" class="form-control" id="email">
+            <div class="form-text"></div>
+            <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+               Email required
+              </div>
+              <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                Invalid Email
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col mb-3">
+            <label  for="mobile" class="form-label">Mobile Number</label>
+            <input formControlName="Mobile" type="text" class="form-control" id="mobile">
+            <div class="form-text"></div>
+        </div>
+        <div class="col ps-3 mb-3">
+            <div class="m-1" style="color: white;">Gender</div>
+            <div class="form-check form-check-inline">
+                <input formControlName="gender" type="radio" class="form-check-input" value="m" id="male">
+                <label  class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input formControlName="gender" type="radio" class="form-check-input" value="f" id="female">
+                <label  class="form-check-label" for="female">Female</label>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col mb-3">
+        <label  for="pwd" class="form-label">Password</label>
+            <input formControlName="Password" type="password" class="form-control" id="pwd">
+            <div class="form-text"></div>
+    </div>
+    <div class="col mb-3">
+        <label  for="rpwd" class="form-label">Repeat Password</label>
+            <input formControlName="rpwd" type="password" class="form-control" id="rpwd">
+            <div class="form-text"></div>
+    </div>
+
+</div>
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="d-grid">
+                <button  type="submit" class="btn btn-primary">submit</button>
+            </div>
+        </div>
+    </div>
+  
+
+</form>
+</div>

@@ -1,0 +1,324 @@
+<nav class="navbar navbar-expand-lg ">
+  <img src="../../assets/images/SecondPocketLogo.png" alt="Logo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse navbar-expand-lg" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-auto pt-2 mr-5">
+        <a style="text-decoration: none; color: white; display: contents;" routerLink="/update" aria-haspopup="true"
+          aria-expanded="false">
+          Update Details
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          User Profile
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/profile">My Profile</a>
+          <a class="dropdown-item" routerLink="/wallet">Update Wallet</a>
+          <a class="dropdown-item" routerLink="/contact">Contact Us</a>
+          <a class="dropdown-item" routerLink="/about">About Us</a>
+          <a  class="dropdown-item" (click)="onSignOut()">Log Out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+	<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <strong><i class="fa fa-success">Welcome  To  Dashboard</i> </strong> <marquee><p style="font-family: Impact; font-size: 18pt">
+   
+"Welcome to your digital wallet dashboard, where your financial freedom begins. Manage your money, track your transactions, and explore endless possibilities.
+  </p></marquee>
+</div>
+	</div>
+</div>
+
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card l-bg-blue-dark">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+          <!-- <div class="mb-1">
+            <h1 class="card-title mb-0">User Wallet</h1>
+          </div> -->
+          <div class="row align-items-center mb-2">
+            <div class="col-8">
+              <h2 class="d-flex align-items-center mb-3">{{ userDetails?.fullName }}</h2 >
+              
+              <h5 class="d-flex align-items-center mb-2">Email: {{ userDetails?.email }}</h5>
+             
+              <h5 class="d-flex align-items-center mb-0">Mobile: {{ userDetails?.mobile }}</h5>
+             
+            </div>
+            <div class="col-4 text-right">
+              <span><i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card l-bg-blue-dark">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+         
+          <div class="row align-items-center mb-2">
+            <div class="col-8">
+              <h5 class="d-flex align-items-center mb-0">Wallet Id:  {{ walletDetails.walletId | slice:0:8 }}</h5>
+              <br>
+              <h5 class="d-flex align-items-center mb-0">Card Number: {{walletDetails.cardNumber}}</h5>
+           
+              <br>
+              <div class="mb-4">
+                <h5 class="card-title mb-0">Total Balance: {{walletDetails.walletBalance}}Rs.</h5>
+              </div>
+             
+            </div>
+            <div class="col-4 text-right">
+              <span><i class="fa fa-arrow-up"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<br>
+<div class="card-container" style="display: flex;">
+  <mat-card>
+    <a routerLink="/transfer">
+      <img src="https://cdn-icons-png.flaticon.com/128/2856/2856892.png" alt="dfghj">
+    </a>
+    <h6>User To User</h6>
+  </mat-card>
+
+  <mat-card>
+    <a routerLink="/deposit">
+      <img src="https://cdn-icons-png.flaticon.com/128/2721/2721121.png" alt="dfghj">
+    </a>
+    <h6>Deposit</h6>
+  </mat-card>
+
+  <mat-card>
+    <a routerLink="/withdraw">
+      <img src="https://cdn-icons-png.flaticon.com/128/3029/3029373.png" alt="dfghj">
+    </a>
+    <h6>Withdraw</h6>
+  </mat-card>
+
+  <mat-card>
+    <a routerLink="/history">
+      <img src="https://cdn-icons-png.flaticon.com/128/4492/4492321.png" alt="dfghj">
+    </a>
+    <h6>History</h6>
+  </mat-card>
+</div>
+
+
+
+
+
+
+
+<br>
+<br>
+<div class="card-container" style="display: flex;">
+  <mat-card fxFlex="20">
+    <a routerLink="/mobile">
+      <img src="https://cdn-icons-png.flaticon.com/128/3659/3659959.png" alt="dfghj">
+    </a>
+    <h6>Recharge</h6>
+
+
+  </mat-card>
+  <mat-card fxFlex="20">
+    <a routerLink="/electricity">
+      <img src="https://cdn-icons-png.flaticon.com/128/8930/8930326.png" alt="dfghj">
+    </a>
+    <h6>Electricity Bill</h6>
+  </mat-card>
+  <mat-card fxFlex="20">
+    <a routerLink="/shopping">
+      <img src="https://cdn-icons-png.flaticon.com/128/10616/10616459.png" alt="dfghj">
+    </a>
+    <h6>Shopping</h6>
+
+  </mat-card>
+  <mat-card fxFlex="20">
+    <a routerLink="/food">
+      <img src="https://cdn-icons-png.flaticon.com/128/737/737967.png" alt="dfghj">
+    </a>
+    <h6>Food</h6>
+
+  </mat-card>
+  <mat-card fxFlex="20">
+    <a routerLink="/about">
+      <img src="https://cdn-icons-png.flaticon.com/128/9222/9222278.png" alt="dfghj">
+    </a>
+    <h6>More</h6>
+
+  </mat-card>
+</div>
+
+
+
+
+<div class="container mt-5 mb-3">
+  <div class="row">
+    <div class="col-2">
+      <img routerLink="/transfer"
+        src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
+        alt="Avatar 1" class="avatar">
+    </div>
+    <div class="col-2">
+      <img routerLink="/transfer" src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar 2" class="avatar">
+    </div>
+    <div class="col-2">
+      <img routerLink="/transfer"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7EbjSPpjYlGxf9N8xqU-T3Fb5ELYEIzZ5138v1uYF-8xoxRGgg1wv0Wncxm1K4zg9xv4&usqp=CAU"
+        alt="Avatar 3" class="avatar">
+    </div>
+    <div class="col-2">
+      <img routerLink="/transfer"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn8P6POnmXE2YJlFMqlJ-b2F_t8bdqTq4CAb-mQWDeI813MCCXefNOg9RjN2AQZwPzy3Y&usqp=CAU"
+        alt="Avatar 4" class="avatar">
+    </div>
+    <div class="col-2">
+      <img routerLink="/transfer"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKgUUpHpc-JwcJiRLScAepL-T3oeaxR8T5A&usqp=CAU"
+        alt="Avatar 5" class="avatar">
+    </div>
+    <div class="col-2">
+      <img routerLink="/transfer"
+        src="https://w7.pngwing.com/pngs/129/292/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"
+        alt="Avatar 6" class="avatar">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<!-- Remove the container if you want to extend the Footer to full width. -->
+
+<div class="container-fluid my-0 gradient-custom mb-0">
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Digital Wallet
+            </h6>
+            <p>
+              Introducing our digital wallet app, a cutting-edge solution designed to revolutionize the way you manage
+              your finances. With our app, you can securely store & transfer money to friends and family. Experience the
+              future of digital wallets with our user-friendly and secure app.
+
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">Secure Transaction</a>
+            </p>
+            <p>
+              <a class="text-white">Payment to Friends</a>
+            </p>
+            <p>
+              <a class="text-white">Bill Payment</a>
+            </p>
+            <p>
+              <a class="text-white">Profile Update</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i>Hinjewadi Phase -1 , Pune</p>
+            <p><i class="fas fa-envelope mr-3"></i> Second_Pocket@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 91 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 91 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
+                class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
+                class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i
+                class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center " style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">SecondPocket.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+
+

@@ -1,0 +1,19 @@
+.gradient-custom {
+    /* background: #6a11cb;
+  
+    background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+  
+    background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+  
+*/
+
+  background-color: navy;
+
+}
+.ours{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}

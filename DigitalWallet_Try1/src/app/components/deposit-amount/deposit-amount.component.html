@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+<div class="backimg container-fluid p-0 m-0">
+<section  class="p-4 p-md-5 mr-5 mx-0">
+  <div class="row d-flex justify-content-end">
+    <div class="col-md-10 col-lg-8 col-xl-5">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-1">
+            <h3>Deposit</h3>
+            <h6>Money</h6>
+          </div>
+          <form   [formGroup]="depositForm" (ngSubmit)="DepositSubmitted()" >
+            <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+
+            <div class="d-flex flex-row align-items-center mb-1 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXc" class="form-control form-control-lg"
+                    value="**** **** **** 3193" />
+                  <label class="form-label" for="formControlLgXc">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-1 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXs" class="form-control form-control-lg"
+                    value="**** **** **** 4296" />
+                  <label class="form-label" for="formControlLgXs">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+
+            <p class="fw-bold mb-4">Deposite Money:</p>
+
+            <div class="form-outline mb-4">
+              <input style="background-color: rgb(228, 226, 226);" type="text" id="CardNumber" class="form-control form-control-lg"
+               [value]="senderName" />
+              <label  class="form-label" for="CardNumber">Cardholder's Name</label>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-7">
+                <div class="form-outline">
+                  <input formControlName="CardNumber" type="text" id="CardNumber" class="form-control form-control-lg"
+                    value="1234 5678 1234" />
+                  <label class="form-label" for="CardNumber">Enter Your Card Number</label>
+                </div>
+                <small style="color: red;"  class="form-text text-danger" *ngIf="CardNumber.errors?.['required'] && (CardNumber.touched || CardNumber.dirty)">
+                    *Card Number is required
+                 </small>
+                 <small style="color: red;"  class="form-text text-danger" *ngIf="CardNumber.errors?.['pattern'] && (CardNumber.touched || CardNumber.dirty)">
+                     *Card Number is Invalid , It should contains 10 digits only
+                 </small>
+              </div>
+            
+              <div class="col-4">
+                <div class="form-outline">
+                  <input formControlName="Mobile" type="text" id="formControlLgcvv" class="form-control form-control-lg"
+                   />
+                  <label class="form-label" for="formControlLgcvv">Mobile</label>
+                </div>
+                <small style="color: red;"  class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+                    *Mobile is required
+                </small>
+                <small style="color: red;"  class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">
+                  Mobile Should contains 10 digits only
+                </small>
+              </div>
+              
+            </div>
+            <div class="col-7">
+                <div class="form-outline">
+                  <input formControlName="Amount" type="text" id="Amount" class="form-control form-control-lg"
+                    value="1234 5678 1234 5678" />
+                  <label class="form-label" for="Amount">Enter Amount</label>
+                </div>
+            
+              </div>
+
+            <button class="btn btn-success btn-lg btn-block">Proceed to deposit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

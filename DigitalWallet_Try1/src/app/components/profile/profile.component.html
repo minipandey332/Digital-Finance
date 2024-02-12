@@ -1,0 +1,172 @@
+<app-navbar></app-navbar>
+<div class="main-container">
+  <!-- Your component content goes here -->
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container justify-content-center text-center">
+
+  <div class="row flex-lg-nowrap">
+    <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+ 
+    </div>
+    <div class="col">
+      <div class="row  ">
+        <div class="col mb-3 ">
+          <div class="card ">
+            <div class="card-body ">
+              <div class="e-profile shadow-lg">
+                <div class="row">
+                  <div class="col-12 col-sm-auto mb-3">
+                    <div class="mx-auto" style="width: 140px;">
+                      <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                        <img [src]="selectedImage" alt="Profile Image" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                    <div class="text-center text-sm-left mb-2 mb-sm-0">
+                      <h2 class="pt-sm-2 pb-1 mb-0 text-nowrap">My Profile</h2>
+                      <p class="mb-0">{{ fullName }}</p>
+                      <div class="mt-2">
+                        <input type="file" (change)="onImageSelect($event)" accept="image/*" style="display: none;" #imageInput>
+                        <button class="btn btn-primary" type="button" (click)="imageInput.click()">
+                          <i class="fa fa-fw fa-camera"></i>
+                          <span>Change Photo</span>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- <div class="text-center text-sm-right">
+                      <button class="btn btn-primary" type="button" (click)="walletDetailView()">Check Your Wallet </button>
+
+                    </div> -->
+                    <div class="text-center text-sm-right">
+                      <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#walletModal">Check Your Wallet</button>
+                    </div>
+                    
+                  </div>
+                </div>
+               
+                <div class="row tab-content pt-3 justify-content-center text-center">
+                  <div class="tab-pane active">
+                    <form class="form" novalidate>
+                              <div class="align-items-center mb-4 ">
+                              
+                                  <h3 class="d-flex justify-content-center mb-4"> FullName:- {{ tableData.fullName }}</h3 >
+
+                                  <h3 class="d-flex justify-content-center  mb-4">Email:-  {{ tableData.email }}</h3>
+                                 
+                                  <h3 class="d-flex justify-content-center  mb-4">Mobile:-  {{ tableData.mobile }}</h3>
+
+                                  <h3 class="d-flex justify-content-center  mb-4">Date-of-Birth:-  {{ tableData.date_Of_Birth
+                                  }}</h3>
+
+                                  <h3 class="d-flex justify-content-center  mb-4">Address:-  {{ tableData.address }}</h3>
+                         
+                      </div>
+
+<!-- Forget Password Button starts -->
+<div class="form-inline fr mt-4 "><a class="text-center" style="font-style: italic; color: rgb(11, 11, 201);" id="forgot" data-bs-toggle="modal" data-bs-target="#exampleModal" class="font-weight-bold">Change Password </a></div>
+
+<!-- Forget Password Button ends -->
+                     
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-primary" type="button" (click)="onSubmit()">Go Back to Dashboard</button>
+                        </div>
+                      </div>
+
+                      
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Marquee Code -->
+        <div class="col-lg-1 d-flex flex-column justify-content-end">
+          <marquee width="100%" direction="up" height="50%" style="color: red;">
+            Never share your personal data to anyone.
+          </marquee>
+        </div>
+    
+  </div>
+  
+ 
+   
+
+</div>
+
+</div>
+
+<app-footer></app-footer>
+
+<!-- Modal -->
+<div class="modal fade" id="walletModal" tabindex="-1" role="dialog" aria-labelledby="walletModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="walletModalLabel">Wallet Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Wallet text information goes here -->
+        <p>This is your wallet information:</p>
+        <p>Wallet Id :  {{ walletDetails.walletId | slice:0:8 }}</p>
+        <p>Card Number : {{walletDetails.cardNumber}}</p>
+        <p>Current Balance: {{walletDetails.walletBalance}}Rs.</p>
+      </div>
+
+
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal for reset button -->
+
+<!-- model -->
+
+<!-- Modal for reset button -->
+<div class="modal fade mt-5 ml-5 ml-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" arial-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title mt-4" id="exampleModalLabel">
+          <span style="font-size: 25px;font-weight: 700;">Forget Your Password?</span><br />
+          <small>Please provide your e-mail we will send reset link</small>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group pt-3">
+          <div class="input-field">
+            <span class="fa fa-user p-2"></span>
+            <input [(ngModel)]="resetPasswordEmail" (ngModelChange)="checkValidEmail($event)" type="text" placeholder="Email" />
+          </div>
+        </div>
+
+        <small *ngIf="!resetPasswordEmail" class="text-danger">*Email is required</small>
+        <small *ngIf="!isValidEmail && resetPasswordEmail" class="text-success">Email is valid</small>
+      </div>
+
+      <div class="modal-footer">
+        <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+        <button type="button" (click)="confirmToSend()" class="btn btn-primary">send</button>
+      </div>
+    </div>
+  </div>
+</div>

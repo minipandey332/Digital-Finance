@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="form-container">
+      <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQzKYONlkvb1Tfu2mOF_0EfdcKzWOQsLIYEQ&usqp=CAU" alt="Your Image" class="image"> -->
+      <div class="progress">
+        <div class="progress-bar" [style.width]="getProgressPercentage()"></div>
+      </div>
+      <div class="form-heading">
+        <h2>User to User Transaction</h2>
+        <p>transfer money to your app's friends</p>
+      </div>
+
+      <div class="ml-4">
+      <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+        <!-- Step 1: Personal Information -->
+        <div *ngIf="currentStep === 1">
+          <h2>Step 1: Fill your detail</h2>
+          <div class="form-group">
+            <label for="SenderMobile">Registered Mobile Number</label>
+            <input type="text" formControlName="SenderMobile" class="form-control" required [value]="senderMobileNumber"  [attr.disabled]="isSenderMobileDisabled ? true : null" >
+          </div>
+          <small style="color: red;"  class="form-text text-danger" *ngIf="SenderMobile.errors?.['required'] && (SenderMobile.touched || SenderMobile.dirty)">
+            *Mobile is required
+        </small>
+        <small style="color: red;"  class="form-text text-danger" *ngIf="SenderMobile.errors?.['pattern'] && (SenderMobile.touched || SenderMobile.dirty)">
+          Mobile Should contains 10 digits only
+        </small>
+
+          <div class="form-group">
+            <label for="RecipientMobile">Enter Receiver's Mobile</label>
+            <input type="text" formControlName="RecipientMobile" class="form-control" required>
+          </div>
+          <small style="color: red;"  class="form-text text-danger" *ngIf="RecipientMobile.errors?.['required'] && (RecipientMobile.touched || RecipientMobile.dirty)">
+            *Mobile is required
+        </small>
+        <small style="color: red;"  class="form-text text-danger" *ngIf="RecipientMobile.errors?.['pattern'] && (RecipientMobile.touched || RecipientMobile.dirty)">
+          Mobile Should contains 10 digits only
+        </small>
+          <!-- Add more fields as needed -->
+          <div class="button-container">
+            <button [disabled]="currentStep === 1" (click)="previousStep()" class="btn btn-secondary">Previous</button>
+            <button (click)="nextStep()" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+  
+        <!-- Step 2: Account Information -->
+        <div *ngIf="currentStep === 2">
+          <h2>Step 2: Fill receiver's details</h2>
+          <p>To whom are you transfer money?</p>
+      
+       
+          <div class="form-group">
+            <label for="Amount">Enter Amount you want to send</label>
+            <input type="number" formControlName="Amount" class="form-control" required>
+          </div>
+          <small style="color: red;"  class="form-text text-danger" *ngIf="Amount.errors?.['required'] && (Amount.touched || Amount.dirty)">
+            *WalletBalance is required
+        </small>
+
+        <div class="form-group">
+          <label>Comment</label>
+          <input type="textarea" class="form-control">
+        </div>
+            
+          <!-- Add more fields as needed -->
+          <div class="button-container">
+            <button (click)="previousStep()" class="btn btn-secondary">Previous</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    </div>
+  </div>
+  

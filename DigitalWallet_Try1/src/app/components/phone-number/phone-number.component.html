@@ -1,0 +1,39 @@
+<div class="flex-container ">
+
+
+    <div class="contain">
+        <div class="row d-flex align-items-center justify-content-center">
+          <form class="col-md-6">
+            <div class="card px-5 py-5">
+              <div class="heading">
+                <h1>OTP Verification </h1>
+                </div>
+              <!-- <div class="form-input">
+                <input type="text" name="email" placeholder="email" class="form-control"
+                  placeholder="Enter email" [(ngModel)]="email" min="10" max="15">
+              </div>
+    
+              <div class="form-input">
+                <input type="password" name="password" placeholder="password" class="form-control"
+                  placeholder="Enter password" [(ngModel)]="password" min="10" max="15">
+              </div> -->
+              
+              <div class="form-input">
+                <input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control"
+                  placeholder="Enter Phone Number" [(ngModel)]="phoneNumber" min="10" max="15">
+              </div>
+              <button class="btn  mt-4 signup" (click)="getOTP()">Get OTP</button>
+              <div id="sign-in-button"></div>
+            </div>
+          </form>
+        </div>
+    
+        <div class='ripple-background'>
+          <div class='circle xxlarge shade1'></div>
+          <div class='circle xlarge shade2'></div>
+          <div class='circle large shade3'></div>
+          <div class='circle mediun shade4'></div>
+          <div class='circle small shade5'></div>
+        </div>
+        
+      </div>

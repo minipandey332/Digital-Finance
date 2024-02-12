@@ -1,0 +1,149 @@
+.dropdown-menu {
+  background: #6a11cb;
+  
+  
+  background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+
+ 
+  background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+}
+
+.dropdown-menu a.dropdown-item {
+  color: white;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+
+  background: #34036a;
+  
+  
+  background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+
+ 
+  background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+}
+
+.navbar-expand-lg .navbar-brand {
+  color: white;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: white;
+  font-size: 1rem;
+}
+
+.navbar img {
+  height: 3rem;
+}
+
+.nav-item {
+  float: right;
+  margin-left: 1170px;
+}
+
+.navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
+  padding-right: 30px;
+  /* Adjust the value as needed */
+}
+
+.navbar {
+  background-color: navy;
+  width: 105rem;
+}
+
+.table-centered {
+  width: 100%;
+  table-layout: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.cardgap {
+  flex: 4;
+  padding-left: 5rem;
+  overflow: hidden;
+  width: 50rem;
+}
+
+.l-bg-blue-dark {
+  background: linear-gradient(to right, #373B44, #4286F4) !important;
+  color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  align-content: center;
+  position: relative;
+  width: 30rem;
+  height: 15rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+}
+
+.container-fluid {
+  background-color: navy;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+  padding-left: 2rem;
+  margin-bottom: 0%;
+}
+
+.card-container mat-card {
+  flex-basis: 24%;
+  margin-right: 10%;
+  text-align: center;
+  
+}
+
+.card-container mat-card:last-child {
+  margin-right: 0;
+}
+
+.card-container mat-card h6 {
+  
+  font-size: 14px;
+  /* Change the font size to your desired value */
+  font-weight: bold;
+  /* Make the text bold */
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.mysidenavbar {
+  height: 100vh;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.mysidenavbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mysidenavbar ul li {
+  padding: 10px;
+}
+
+.mysidenavbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mysidenavbar ul li a:hover {
+  color: #ddd;
+}

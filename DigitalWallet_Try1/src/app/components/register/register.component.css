@@ -1,0 +1,18 @@
+form{
+    width: 500px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-color {
+    background-color: rgb(164, 164, 252); /* Replace with your desired background color */
+  }
+  
+
+  label{
+    color: aliceblue;
+  }

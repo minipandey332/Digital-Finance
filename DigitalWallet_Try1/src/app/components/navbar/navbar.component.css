@@ -1,0 +1,69 @@
+/* .gradient-custom {
+
+    background: #6a11cb;
+  
+  
+    background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+  
+   
+    background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+  } */
+
+  .dropdown-menu {
+    background: #6a11cb;
+  
+  
+    background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+  
+   
+    background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+  }
+  
+  .dropdown-menu a.dropdown-item {
+    color: white;
+  }
+  
+  .dropdown-menu a.dropdown-item:hover {
+    background: #6a11cb;
+  
+  
+    background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+  
+   
+    background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+  }
+  
+  .navbar-expand-lg .navbar-brand {
+    color: white;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .navbar img {
+    height: 3rem;
+  }
+  
+  .nav-item {
+    float: right;
+    margin-left: 1170px;
+  }
+  
+  .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
+    padding-right: 30px;
+    /* Adjust the value as needed */
+  }
+  
+  .navbar {
+    background: #6a11cb;
+  
+  
+    background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9));
+  
+   
+    background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9));
+    width: 105rem;
+  }
+  

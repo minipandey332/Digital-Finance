@@ -1,0 +1,39 @@
+.otp{
+  
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    padding-top: 20rem;
+
+   
+  }
+
+
+  .btn{
+   
+    align-items: center;
+    background-color:rgb(52, 217, 212);
+    color: black;
+   margin-left: 20%;
+   margin-top: 10%;
+   width: 150px;
+   height: 50px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-container {
+    position: relative;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy9Ac59grOEWtelWnJnCMLB47CWhAgqpbe2w&usqp=CAU);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Set the height to 100vh (viewport height) to cover the entire screen */
+    width: 100%; /* Set the width to 100% to cover the entire screen */
+    margin: 0;
+    overflow: hidden;
+  }

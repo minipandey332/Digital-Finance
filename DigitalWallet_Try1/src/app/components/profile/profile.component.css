@@ -1,0 +1,47 @@
+.container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover ;
+   padding-top: 5%;
+
+
+  }
+  .card {
+    background-image: url('https://img.freepik.com/free-photo/blue-smooth-wall-textured-background_53876-106133.jpg?size=626&ext=jpg&ga=GA1.2.879075393.1686870105&semt=ais');
+    color: white;
+    height: 110%;
+    width: 90%;
+    
+    /* Align the text in the center */
+    text-align: center;
+  }
+  
+  /* Additional styles for text alignment */
+  .text-center.text-sm-right span.badge,
+  .text-center.text-sm-right div.text-muted small {
+    color: white;
+    text-align: center;
+  }
+  
+
+/* your-component.component.css */
+
+/* Assuming the main-container is a direct child of the body element */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: cover ;
+  height: 100vh; /* Set the height to 100vh to cover the whole viewport height */
+  /* Other background properties can be added here, like size, position, etc. */
+
+      background-image: url('https://img.freepik.com/free-vector/modern-banner-with-abstract-low-poly-design_1048-14340.jpg?size=626&ext=jpg&ga=GA1.2.879075393.1686870105&semt=ais');
+
+}
+

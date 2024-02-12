@@ -1,0 +1,167 @@
+/* body {
+    background: url("https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg");
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .pic {
+    box-shadow: 6px 6px 7px #888888;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .pic:before {
+    content: "";
+    margin-top: -63px;
+    margin-left: -80px;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: none;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .pic:hover {
+    box-shadow: 3px 3px 7px #888888;
+    cursor: pointer;
+  }
+  
+  .content {
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Open Sans Condensed", sans-serif;
+    
+  }
+  
+  .contentHead {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: navy;
+    text-align: center;
+    text-decoration: none !important;
+   padding-top: 1rem;
+   letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  
+  
+  p {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  
+  h2 {
+    font-family: "Open Sans Condensed", sans-serif;
+  }
+  
+  .contentHead {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  sup {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: italic;
+    font-size: smaller;
+  }
+  
+  span {
+    color: pink;
+    font-family: "Open Sans Condensed", sans-serif;
+  }
+   */
+
+
+   body {
+    background: url("https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg");
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pic {
+    box-shadow: 6px 6px 7px #888888;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .pic:before {
+    content: "";
+    margin-top: -63px;
+    margin-left: -80px;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: none;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .pic:hover {
+    box-shadow: 3px 3px 7px #888888;
+    cursor: pointer;
+  }
+  .content {
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Open Sans Condensed", sans-serif;
+    padding: 5%;
+  }
+  .contentHead {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: navy;
+    text-align: center;
+    text-decoration: none !important;
+   padding-top: 1rem;
+   letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  p {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  h2 {
+    font-family: "Open Sans Condensed", sans-serif;
+  }
+  .contentHead {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  sup {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: italic;
+    font-size: smaller;
+  }
+  span {
+    color: pink;
+    font-family: "Open Sans Condensed", sans-serif;
+  }

@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3399ff;
+    overflow: hidden;
+  }
+  
+  .flex-container {
+    position: relative;
+    background-image: url(https://media.sciencephoto.com/c0/55/38/63/c0553863-800px-wm.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Set the height to 100vh (viewport height) to cover the entire screen */
+    width: 100%; /* Set the width to 100% to cover the entire screen */
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium {
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large {
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge {
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge {
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1 {
+    opacity: 0.2;
+  }
+  .shade2 {
+    opacity: 0.5;
+  }
+  
+  .shade3 {
+    opacity: 0.7;
+  }
+  
+  .shade4 {
+    opacity: 0.8;
+  }
+  
+  .shade5 {
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0.8);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  
+  .card {
+    border: none;
+     /* //padding: 20px; */
+  
+    background-color: #70def4;
+    color: #fff;
+   
+  }
+  
+  .contain {
+    margin: 10rem 0 3rem 0;
+    padding-top: 0%;
+    padding-left: 30%;
+    width: 100rem;
+  }
+  
+  .form-input {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .form-control {
+    height: 50px;
+    background-color: #dfe7f3;
+    text-indent: 24px;
+    font-size: 15px;
+  }
+  
+  .form-control:focus {
+    background-color: #25272a;
+    box-shadow: none;
+    color: #fff;
+    border-color: #4f63e7;
+  }
+  
+  .signup {
+    height: 50px;
+    font-size: 14px;
+    color: wheat;
+    background-color: darkblue;
+  }
+  
+  .heading{
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+    color: #25272a;
+  
+  }

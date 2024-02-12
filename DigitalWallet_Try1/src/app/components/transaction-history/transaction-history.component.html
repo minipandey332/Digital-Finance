@@ -1,0 +1,113 @@
+<!-- table.component.html -->
+
+<!-- <table class="table table-striped mt-3">
+
+    <thead>
+
+      <tr>
+
+        <th>Transaction Id</th>
+
+        <th>Mobile Number</th>
+
+        <th>Amount</th>
+
+        <th>Status</th>
+
+        <th>UserID</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let data of tableData">
+
+        <td>{{data.transactionId}}</td>
+
+        <td>{{data.mobileNumber}}</td>
+
+        <td>{{data.transactionAmount}}</td>
+
+        <td>{{data.transactionCommentP}}</td>
+
+       
+
+        <td>{{data.userId}}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table> -->
+
+  <div id="content" #content>
+
+    <table class="table table-striped mt-3">
+  
+      <thead>
+  
+        <tr>
+  
+          <th>Id</th>
+  
+          <th>TransactionId</th>
+  
+          <th>Email</th>
+  
+          <th>Mobile</th>
+  
+          <th>Deposit</th>
+  
+          <th>Withdraw</th>
+  
+          <th>Comment</th>
+  
+          <th>CreationDate</th>
+  
+        </tr>
+  
+      </thead>
+  
+      <tbody>
+  
+        <tr *ngFor="let data of tableData">
+  
+          <td>{{data.id}}</td>
+  
+          <td>{{data.transactionId}}</td>
+  
+          <td>{{data.email}}</td>
+  
+          <td>{{data.mobile}}</td>
+  
+          <td>{{data.deposit}}</td>
+  
+          <td>{{data.withdraw}}</td>
+  
+          <td>{{data.comment}}</td>
+  
+          <td>{{data.creationDate}}</td>
+  
+   
+  
+               
+  
+        </tr>
+  
+      </tbody>
+  
+    </table>
+  
+   
+  
+  </div>
+  
+   
+  
+ <!-- // <button (click)="MakePDF()">downlaod</button> -->
+ <div class="button">
+  <button  style="font-size: larger;" mat-button color="primary"     (click)="MakePDF()">Downlaod</button>
+</div>
+   

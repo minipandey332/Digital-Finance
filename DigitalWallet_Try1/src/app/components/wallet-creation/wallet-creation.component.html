@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your wallet here</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form [formGroup]="walletcreateform" (ngSubmit)="OnSubmitWallet()">
+                <h2 style="text-decoration: underline;">Wallet Creation</h2>
+                <table>
+                 
+                    <tr>
+                        <td>
+                            <div class="input-group" >
+                                <input formControlName="Email" type="text" [value]="senderEmail">
+                                <label for="">Email: <img src="../../assets/img/email.jpg" width="20"></label>
+                                <!-- <p style="color:darkred;" >{{getCardNumberErrorMessage}}</p> -->
+                            </div>
+                            <!-- <small style="color: red;"  class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                               *Email is required
+                            </small>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="Email.errors?.['pattern'] && (Email.touched || Email.dirty)">
+                                *Email is Invalid , i.e, test@gmail.com
+                            </small> -->
+                        </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <input formControlName="CardNumber" type="text" maxlength="12" required>
+                                <label for="">Card Number : Accepted Card <img src="../../assets/img/card5.jpg" width="30"></label>
+                                <!-- <p style="color:darkred;" >{{getCardNumberErrorMessage}}</p> -->
+                            </div>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="CardNumber.errors?.['required'] && (CardNumber.touched || CardNumber.dirty)">
+                               *Card Number is required
+                            </small>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="CardNumber.errors?.['pattern'] && (CardNumber.touched || CardNumber.dirty)">
+                                *Card Number is Invalid , It should contains 16 digits only
+                            </small>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input formControlName="CVV" type="text" maxlength="3" required>
+                                <label for="">CVV</label>
+                                <!-- <p style="color:darkred;" >{{getCVVErrorMessage()}}</p> -->
+                            </div>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="CVV.errors?.['required'] && (CVV.touched || CVV.dirty)">
+                                *CVV is required
+                            </small>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="CVV.errors?.['pattern'] && (CVV.touched || CVV.dirty)">
+                               CVV Should contains 3 digits only i.e,888
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <input formControlName="AccountHolderName" type="text" required>
+                                <label for="">Card Holder Name</label>
+                                <!-- <p style="color:darkred;" >{{getAccountHolderNameErrorMessage()}}</p> -->
+                            </div>
+                            <small style="color: red;" class="form-text text-danger" *ngIf="AccountHolderName.errors?.['required'] && (AccountHolderName.touched || AccountHolderName.dirty)">
+                                Card Holder Name is Required
+                            </small>
+                            <!-- <small  style="color: red;" class="form-text text-danger" *ngIf="AccountHolderName.errors?.['pattern'] && (AccountHolderName.touched || AccountHolderNameAccountHolderNameAccountHolderName.dirty)">
+                                Card Holder Name is should contain alphabet only
+                            </small> -->
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input formControlName="WalletBalance" type="text" required>
+                                <label for="">Enter Wallet Balance</label>
+                                <!-- <p style="color:darkred;" >{{getWalletBalanceErrorMessage()}}</p> -->
+                            </div>
+                            <small style="color: red;"  class="form-text text-danger" *ngIf="WalletBalance.errors?.['required'] && (WalletBalance.touched || WalletBalance.dirty)">
+                                *WalletBalance is required
+                            </small>
+                            <!-- <small style="color: red;"  class="form-text text-danger" *ngIf="WalletBalance.errors?.['pattern'] && (WalletBalance.touched || WalletBalance.dirty)">
+                               *WalletBalance should contains digits only
+                            </small> -->
+                        </td>
+                    </tr>
+                </table>
+                <div class="input-group">
+                    <input formControlName="UserComments" style="width: 650px;" type="text" required>
+                    <label for="">User Comments</label>
+                    <!-- <p style="color:darkred;" >{{getUserCommentsErrorMessage()}}</p> -->
+                </div>
+                <button type="submit" class="btn" (click)="CreateWallet()">Create Wallet</button>
+            </form>
+        </div>
+    </div>
+</body>

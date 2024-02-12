@@ -1,0 +1,86 @@
+
+<app-navbar></app-navbar>
+<div class="container-fluid gradient-custom ">
+<div  class="row mt-3 mx-3 " style="margin-top:25px ;">
+  <div class="col-md-3">
+  
+    <div style="margin-top: 50px; margin-left: 10px;" class="text-center">
+      <i id="animationDemo" data-mdb-animation="slide-right" data-mdb-toggle="animation"
+        data-mdb-animation-reset="true" data-mdb-animation-start="onScroll"
+        data-mdb-animation-on-scroll="repeat" class="fas fa-3x fa-shipping-fast text-white"></i>
+      <h3 class="mt-3 text-white">Update Form</h3>
+      <p class="white-text">A Digital Wallet App - The Second Pocket </p>
+    </div>
+    <div class="text-center">
+     <h1>Second Pocket</h1>
+    </div>
+
+
+  </div>
+  <div class="col-md-9 justify-content-center ">
+    <div class="card card-custom pb-0">
+      <div class="card-body mt-0 mx-5">
+        <div class="text-center mb-3 pb-2 mt-3">
+          <h4 style="color: #495057 ;">Update Your Details</h4>
+        </div>
+
+        <form class="mb-0" [formGroup]="updateForm" (ngSubmit)="updateSubmit()">
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input formControlName="FullName" type="text" id="FullName" class="form-control input-custom" />
+                <label class="form-label" for="FullName">Full Name</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input formControlName="Email" type="text" id="Email" class="form-control input-custom" />
+                <label class="form-label" for="Email">Email</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input formControlName="Date_Of_Birth" type="text" id="Date_Of_Birth" class="form-control input-custom" />
+                <label class="form-label" for="Date_Of_Birth">DOB</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input formControlName="Address" type="text" id="Address" class="form-control input-custom" />
+                <label class="form-label" for="Address">Address</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input formControlName="Mobile" type="text" id="Mobile" class="form-control input-custom" />
+                <label class="form-label" for="Mobile">Mobile</label>
+                
+              <small style="color: red;"  class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">
+                Mobile Should contains 10 digits only
+              </small>
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="float-end ">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-rounded"
+              style="background-color: #0062CC ;">Update</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,122 @@
+
+<!-- Login Form Starts  -->
+
+        <div class="limiter" id="login">
+            <div class="container-login100" style="background-image:url(https://media.istockphoto.com/id/1185404273/vector/mobile-banking-and-sending-money-from-credit-card-via-electronic-wallet-app.jpg?s=612x612&w=0&k=20&c=C0ulvCsWafUYQ_FLmbykSaQv_40L4m2fopXLy--isRk=)">
+              <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div style="height: 40%; width: 40%;" class="digital-wallet">
+                                <img   src="https://cdn3d.iconscout.com/3d/premium/thumb/digital-payment-security-8191502-6594620.png" alt="Digital Wallet" class="wallet-image">
+                                <!-- <h2 class="wallet-title" style="color: aliceblue; font-weight: bold;">Digital Wallet</h2> -->
+                                <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+                                     <p class="my-neon-text">Digital Wallet</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="login_topimg"></div>
+                            <div class="wrap-login100">
+                                <!-- Form Tag -->
+                                <form  [formGroup]="loginForm" (ngSubmit)="LoginSubmitted()" class="login100-form validate-form">
+                                    <span class="login100-form-title">Login</span>
+                                    <span class="login100-form-subtitle m-b-16">to your account</span>
+                                    <div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
+                                        <input formControlName="email" class="input100" type="text" name="email" placeholder="Username">
+                                        <span class="focus-input100"></span> <span class="symbol-input100"> <i class="fas fa-user"></i> </span> 
+                                   
+                                    </div>
+                                    <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                                        *Email is required
+                                      </div>
+                                      <div class="form-text text-danger" *ngIf="Email.errors?.['pattern'] && (Email.touched || Email.dirty)">
+                                       Invalid Email e.g, test@gmail.com
+                                      </div>
+
+                                    <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                                        <input formControlName="password" class="input100" [type]="type" name="pass" placeholder="Password">
+                                        <span class="focus-input100"></span> <span class="symbol-input100"> <i class="fas fa-lock"></i> </span> 
+                                        <span (click)="hideShowPass()" class="fas {{eyeIcon}}"></span>
+                                      
+                                        
+                                        <!-- <span class="focus-input100"></span>
+                                        <span class="symbol-input100">
+                                            <i class="fas fa-lock"></i>
+                                        </span> -->
+                                    </div>
+                                    <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
+                                        *Password is required
+                                      </div>
+                                      <div class="form-text text-danger" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
+                                        Minimum Password length is 6 character
+                                      </div>
+
+                                      <div class="form-outline fr mt-4">
+                                        <a id="forget" data-bs-toggle="modal" data-bs-target="#exampleModal" class="font-weight-bold"></a>
+                                     </div>
+                                 
+                                    <div class="flex-sb-m w-full p-b-30">
+                                        <div style="display: flex; justify-content: center; width: 100%;">
+                                            <button type="submit">
+                                                <a class="set-border-here">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    Submit
+                                                </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6>Don't Have an Account?</h6>
+                                        <a id="forget" routerLink="/signup"><u>Register</u></a>
+                                    </div>
+                                    <!-- <div class="col-md-6">
+                                        <a href="/forgot-password" class="text-dark" style="text-decoration: none;"> Forgot Password ? </a>
+                                    </div> -->
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+<!-- Login Form Ends  -->
+
+<!-- model -->
+<div class="modal fade mt-5 ml-5 ml-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" arial-hidden="true">
+    <div class=" modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title mt-4" id="exampleModalLabel"> <span style="font-size: 25px;font-weight: 700;">Forget Your Password?</span><br>
+                <small>Please provide your e-mail we will send reset link</small>
+                </p>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group pt-3">
+                    <div class="input-field"> <span class="fa fa-user p-2"></span>
+                        <input [(ngModel)]="resetPasswordEmail" (ngModelChange)="checkValidEmail($event)" type="text" placeholder="Email"></div>
+                        </div>
+                        
+                        
+                        <small *ngIf="!resetPasswordEmail" class="text-danger">*Email is required</small>
+                        <small *ngIf="!isValidEmail && resetPasswordEmail" class="text-success">Email is valid</small>
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                        <button type="button" (click)="confirmToSend()" class="btn btn-primary">send</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+  

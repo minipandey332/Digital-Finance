@@ -1,0 +1,131 @@
+
+    <div class="limiter" id="login">
+        
+            <div class="container-login100" style="background-image:url(https://media.sciencephoto.com/c0/55/38/63/c0553863-800px-wm.jpg)">
+            <div class="container registertab">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="login_topimg">
+                        </div>
+                        <div class="wrap-login100">
+
+                            <p class="text-center fs-3" [ngClass]="isAccountCreated?'text-success pb-1':'text-danger pb-1'">
+                                {{displayMsg}}
+                            </p>
+                            <!-- Form Tag -->
+                            <form class="login100-form"  [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">   
+                                <span class="login100-form-title "> Register </span> 
+                                <span class="login100-form-subtitle m-b-16"> For Free </span>
+                                
+                                            <div class="wrap-input100 m-b-16" > 
+                                                <input formControlName="FullName" type="text" class="form-control" id="FullName" class="input100"  placeholder="Full Name"> 
+                                               
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-user"></i></span>
+                                            </div>
+                                            <div class="form-text text-danger" *ngIf="FullName.errors?.['required'] && (FullName.touched || FullName.dirty)">
+                                                First name is required
+                                            </div>
+                                            <div class="form-text text-danger" *ngIf="FullName.errors?.['pattern'] && (FullName.touched || FullName.dirty)">
+                                                Name should only contains Alphabet
+                                            </div>
+                                      
+                                            <div class="wrap-input100 m-b-16"> 
+                                                <input formControlName="Email" type="email" class="form-control" id="Email" class="input100" placeholder="Email"> 
+                                                
+                                                <span class="focus-input100"></span>
+                            <span class="symbol-input100"><i class="fas fa-envelope"></i></span> 
+                                            </div>
+                                            <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                                                Email required
+                                               </div>
+                                               <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                                                 Invalid Email e.g, test@gmail.com
+                                               </div>
+                                       
+                                            <div class="wrap-input100 m-b-16"> 
+                                                <input formControlName="Date_Of_Birth" type="text" class="form-control" id="Date_Of_Birth" class="input100" placeholder="Date Of Birth"> 
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-calendar"></i></span>
+                                            </div>
+                                       
+                                            <div class="wrap-input100 m-b-16"> 
+                                                <input formControlName="Address" type="text" class="form-control" id="Address" class="input100" placeholder="Address"> 
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-map-marker"></i></span>
+                                            </div>
+                                       
+                                            <div class="wrap-input100 m-b-16"> 
+                                                <input formControlName="Password"  [type]="type"  class="form-control" id="Password" class="input100" placeholder="Password">
+            
+                                                <span (click)="hideShowPass()" class="fas {{eyeIcon}}"></span>
+            
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-lock"></i></span>
+                                            </div>
+                                                <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
+                                                    *Password is required
+                                                  </div>
+                                                  <div class="form-text text-danger" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
+                                                    Minimum Password length is 6 character
+                                                  </div>
+<!--                                       
+                                            <div class="wrap-input100 m-b-16"> 
+                                                <input formControlName="rrpwd" class="form-control" id="rrpwd" class="input100" placeholder="Retype Password">
+                                               
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-lock"></i></span>
+                                                </div>
+                                                <div class="class font-text text-danger" [ngStyle]="{'display': repeatPass}">
+                                                    Repeat Password is invalid
+                                                </div> -->
+                                       
+                                            <div class="wrap-input100 m-b-16" > 
+                                                <input formControlName="Mobile" type="text" class="form-control" id="Mobile" class="input100" placeholder="Mobile"> 
+                                                <span class="focus-input100"></span>
+                                                <span class="symbol-input100"><i class="fas fa-phone"></i></span>
+                                                <div class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+                                                    *Mobile is required
+                                                  </div>
+                                                  <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">
+                                                    Mobile should contain 10 digit only
+                                                  </div>
+                                            </div>
+                                       
+                                   
+
+                                <div class="flex-sb-m w-full p-b-30">
+                                    <!-- <div class="contact100-form-checkbox">
+                                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                        <label class="label-checkbox100" for="ckb1">
+                                            Remember me
+                                        </label>
+                                    </div> -->
+                                    
+                                    <div style="display: flex; justify-content: center; width: 100%;">
+                                        <button onclick="onRedirect()" type="submit">
+                                            <a  class="set-border-here">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                       Submit
+                                      </a>
+                                    </button>
+                                </div>
+                                   
+                                </div>
+                                <!-- <div class="container-login100-form-btn p-t-25"> <button class="login100-form-btn"> Login </button> </div> -->
+                                <div>
+                                    <h6>Already Have An Account?</h6>
+                                    <a id="forget" routerLink="/login"><u>Login</u></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
