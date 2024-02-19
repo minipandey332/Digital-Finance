@@ -1,5 +1,6 @@
 # 🎁Watch Out my Project Preview :
 ![porta10](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/be7bd4f6-02a8-4f3d-a990-ff319733eb3e)
+Session Created : JWT Authentication Used here
 ![porta23](https://github.com/minipandey332/E-Pocket/assets/73335393/664fa824-50ce-409b-8e59-958fceceb4bf)
 ![porta14](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/1cbfe8b8-7d38-4b5b-87f1-57ebcadc1bd2)
 ![porta15](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/8abb158d-9ae8-42b4-9160-e154e3f54e47)
