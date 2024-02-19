@@ -12,3 +12,5 @@
 ![porta19](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/d8c49211-9b64-42ed-bfcd-3c2fb0712af5)
 ![porta20](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/d6f57287-d4a1-41d5-b9f2-5b151ed9339a)
 ![porta21](https://github.com/minipandey332/Digital-Wallet-App/assets/73335393/3a868e04-f767-4ef7-b21f-b8b4572bd512)
+![porta21](https://github.com/minipandey332/E-Pocket/assets/73335393/65d1e39f-c9ea-4a3a-99cf-39d2f3d9fb12)
+![porta22](https://github.com/minipandey332/E-Pocket/assets/73335393/942d8dd3-0915-439c-ab3d-9c59493d7d35)
