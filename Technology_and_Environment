@@ -1,0 +1,10 @@
+Backend Technology Used: .NET Core Web API, Entity Framework, Microservices, C# Programming
+Frontend : Angular for UI (HTML, CSS, Matrial Tools, Typescript).
+Database used : SSMS
+
+IDE : VS Code 2022 for Angular , Visual Studio 2019 for backend
+
+You can open AngularAuthAPI folder in VS Code
+& DigitalWallet folder in Visual Studio.
+
+Connect database SSMS with Code first appoarch using EF.
